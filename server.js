@@ -42,7 +42,9 @@ var users =
     }
 }
 
-
+// Simulate 404
+// app.get('/v2/users', (req, res) => res.status(404).send('Not found'))
+// Simulate controller-api User endpoint
 app.get('/v2/users', (req, res) => res.json(users))
 
 app.listen(port, () => console.log(`Server listening on http://localhost:${port}`))
